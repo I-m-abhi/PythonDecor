@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 1rem 2.4rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: .1rem solid gray;
+}
+
+.logo{
+  width: 10%;
+}
+
+.container {
+  padding: 5rem 20rem;
+}
+
+.section-head {
+  border: .1rem solid gray;
+  padding: 2.4rem;
+  font-weight: 800;
+  font-size: 3.2rem;
+  display: inline-block;
+  margin-bottom: 4rem;
+}
