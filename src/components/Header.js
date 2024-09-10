@@ -1,8 +1,20 @@
+import { useState } from 'react';
 import logo from '../Images/logo.jpeg';
 
 const Header = () => {
+  const [fixedHeader, setFixedHeader] = useState(false);
+
+  const fixedOnScroll = () => {
+    if (window.scrollY >= 100) {
+      setFixedHeader(true);
+    } else {
+      setFixedHeader(false);
+    }
+  };
+  window.addEventListener("scroll", fixedOnScroll);
+
   return (
-    <div className="navbar">
+    <div className={fixedHeader ? 'navbar fixed' : 'navbar'}>
       <div className="logo-header">
         <img className='logo' src={logo} alt="Python Decor & Associates" />
         <h1>Python Decor</h1>

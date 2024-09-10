@@ -11,7 +11,6 @@
       padding: 1.1rem;
       font-weight: 400;
       font-size: 1.2rem;
-      letter-spacing: .1rem;
 
       & span {
         font-weight: 700;
@@ -24,6 +23,8 @@
   background-color: #EEF1F2;
   display: flex;
   align-items: center;
+  width: 100%;
+  z-index: 10;
 
   & .logo-header {
     padding-left: 4.8rem;
@@ -71,6 +72,12 @@
   }
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  border-bottom: .1rem solid rgba(128, 128, 128, 0.663);
+}
+
 .mainslider {
   height: 510px;
   display: flex;
@@ -81,12 +88,12 @@
   }
 
   & .slide {
+
     & .item {
       width: 97%;
       height: 510px;
       position: absolute;
       background-size: cover;
-      animation: slider 3s ease-in-out infinite;
 
       &::before {
         content: '';
@@ -101,49 +108,77 @@
       & .content {
         position: absolute;
         top: 50%;
-        left: 200px;
+        left: 250px;
         color: #eee;
         transform: translate(0, -50%);
 
         & .name {
-          font-size: 20px;
+          font-size: 1.6rem;
           font-weight: bold;
-          opacity: 0;
-          animation: animate 1s ease-in-out 1 forwards;
+          letter-spacing: .6rem;
+          animation: animate .5s linear;
+        }
+
+        & .heading {
+          font-weight: 800;
+          font-size: 47px;
+          width: 70%;
+          margin: 1.4rem 0;
+          animation: animate .5s linear;
         }
 
         & .des {
-          margin-top: 10px;
-          margin-bottom: 20px;
-          opacity: 0;
-          animation: animate 1s ease-in-out 0.3s 1 forwards;
+          width: 65%;
+          font-size: 1.5rem;
+          font-weight: 500;
+          letter-spacing: .1rem;
+          line-height: 2.5rem;
+          word-spacing: .1rem;
+          animation: animate .5s linear;
         }
 
-        & .button {
-          padding: 10px 20px;
-          border: none;
-          cursor: pointer;
-          opacity: 0;
-          animation: animate 1s ease-in-out 0.6s 1 forwards;
+        & button {
+          background-color: #d7b39a;
+          margin-top: 2.4rem;
+          animation: animate .5s linear;
         }
       }
+    }
 
+    & .item3 {
+      animation: slider 5s ease-in-out;
+    }
 
+    & .item1 {
+      animation: slider 5s ease-in-out 10s;
+    }
+
+    & .item2 {
+      animation: slider 5s ease-in-out 15s;
     }
   }
+
+
 }
 
 @keyframes animate {
-  from {
-    opacity: 0;
-    transform: translate(0, 100px);
-    filter: blur(33px);
+  0% {
+    background-color: white;
+    transform: translateY(-53px);
   }
 
-  to {
-    opacity: 1;
-    transform: translate(0);
-    filter: blur(0);
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slider {
+  0% {
+    z-index: 1;
+  }
+
+  100% {
+    z-index: 0;
   }
 }
 
@@ -158,13 +193,6 @@
     & ul {
       display: flex;
       gap: 1.4rem;
-
-      & li {
-        padding: 1rem 2rem;
-        background-color: gray;
-        font-size: 1.4rem;
-        border-radius: 50%;
-      }
     }
   }
 
@@ -319,7 +347,7 @@
 .informative-section .infographic {
   background-image: url('../Images/bg-8.jpg');
   background-size: cover;
-  padding: 7.4rem 4.4rem;
+  padding: 7.4rem 3.4rem;
 }
 
 .informative-section .infographic .section-content {
@@ -329,14 +357,14 @@
 
   & .content {
     background-image: url('../Images/bg-5.png');
-    padding: 2.4rem 3.4rem;
+    padding: 2.4rem 3rem;
     z-index: 1;
     background-color: white;
 
     & .num {
-      font-size: 4.4rem;
+      font-size: 4.6rem;
       font-weight: 700;
-      letter-spacing: .4rem;
+      letter-spacing: .2rem;
       color: #d7b39a;
       padding: 1rem;
       position: relative;
@@ -354,9 +382,9 @@
     }
 
     & h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      letter-spacing: .1rem;
+      letter-spacing: .01rem;
       padding-top: 2.4rem;
     }
   }
@@ -385,13 +413,168 @@
     padding: 2.4rem 2.4rem 0 2.4rem;
     background-color: white;
     width: 80%;
+
     & .counter {
       background-color: #d7b39a;
       display: inline-block;
       padding: 1.8rem 1.8rem;
       font-weight: 600;
       font-size: 1.4rem;
-      inset: auto 0 0 auto;
+      /* inset: auto 0 0 auto; */
     }
   }
+}
+
+/* Service-Section */
+.service-section {
+  background-color: #eef1f2;
+
+  & .container {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: 'SERVICES';
+      font-size: 8rem;
+      rotate: 270deg;
+      font-weight: 600;
+      right: -18rem;
+      top: 30%;
+      color: #d4d5d5;
+      letter-spacing: 1.5rem;
+    }
+  }
+}
+
+.service-section .container .section-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+
+  & .content {
+    background-color: white;
+    border-radius: 1.4rem;
+    padding: 2.4rem 3.4rem;
+    border-bottom: 5px solid #d7b39a;
+    transition: border .2s;
+
+    & .num {
+      font-size: 8rem;
+      font-weight: 700;
+      text-align: right;
+      color: #eef1f2;
+    }
+
+    & h3 {
+      font-size: 2rem;
+      padding: 1.4rem 0;
+    }
+
+    & p {
+      padding-bottom: 1.4rem;
+    }
+
+    & button {
+      border: none;
+      padding-left: 0;
+    }
+  }
+}
+
+.service-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+.service-icon:hover {
+  animation: pulse .5s;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Footer-Section */
+.footer-section {
+  background-color: #23252D;
+  color: white;
+}
+
+.footer-section .container .content-sec-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5.4rem;
+
+  & h2 {
+    color: #d7b39a;
+    padding: 1.4rem 0;
+    font-size: 1.8rem;
+  }
+
+  & li {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    border-bottom: .1rem dashed rgba(246, 242, 242, 0.115);
+    line-height: 2.5rem;
+  }
+
+  & .link-sec {
+    li:hover {
+      color: #d7b39a;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer-section .container .content-sec-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 54px;
+  gap: 10.4rem;
+  align-items: center;
+
+  & .foot-media {
+    & ul {
+      display: flex;
+      gap: 2.4rem;
+    }
+  }
+
+  & .input-field {
+    display: flex;
+    align-items: center;
+
+    & input {
+      width: 100%;
+      background-color: #2e313b;
+      padding: 15px;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 1.5rem;
+      letter-spacing: .1rem;
+      opacity: .7;
+    }
+
+    & li {
+      background-color: #fff;
+      color: #000;
+      padding: 15px;
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}
+
+.footer-section .copyright-sec .container {
+  padding: 2.4rem 20rem;
+  border-top: .1rem solid rgba(128, 128, 128, 0.137);
 }

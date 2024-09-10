@@ -5,6 +5,8 @@ import MediaLinks from '../components/MediaLinks';
 import About from '../components/About';
 import WhatWeDo from '../components/WhatWeDo';
 import Informative from '../components/Informative';
+import Services from '../components/Services';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -16,6 +18,7 @@ const Home = () => {
       <About />
       <WhatWeDo />
       <Informative />
+      <Services />
     </div>
   )
 };

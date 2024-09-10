@@ -12,12 +12,17 @@ html {
 
 li {
   list-style: none;
+  letter-spacing: .1rem;
+  word-spacing: .1rem;
 }
 
 p {
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  line-height: 2.5rem;
+  opacity: .7;
+  word-spacing: .1rem;
 }
 
 button {
@@ -25,9 +30,10 @@ button {
   border-radius: 1rem;
   background-color: white;
   border: .1rem solid gray;
+  cursor: pointer;
 }
 
-.logo{
+.logo {
   width: 10%;
 }
 
@@ -37,9 +43,29 @@ button {
 
 .section-head {
   border: .1rem solid gray;
-  padding: 2.4rem;
+  padding: 1.4rem 2.4rem;
   font-weight: 800;
   font-size: 3.2rem;
   display: inline-block;
   margin-bottom: 4rem;
+}
+
+.media-icons {
+  color: #23252d;
+  font-size: 14px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  line-height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: .1rem solid gray;
+  text-align: center;
+  padding: 3px;
+}
+
+.media-icons:hover {
+  cursor: pointer;
+  background-color: #d7b39a;
+  border: none;
 }

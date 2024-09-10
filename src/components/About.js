@@ -1,3 +1,5 @@
+import fixedImg from '../Images/1-ab.jpg';
+
 const About = () => {
   return (
     <div className="about-section">
@@ -18,7 +20,7 @@ const About = () => {
               <img src="https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
             </div>
             <div className="carousel-before">
-              <img src="https://images.pexels.com/photos/757889/pexels-photo-757889.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
+              <img src={fixedImg} alt="" />
             </div>
           </div>
         </div>

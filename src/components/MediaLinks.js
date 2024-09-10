@@ -8,10 +8,10 @@ const MediaLinks = ()=> {
     <div className="medialinks">
       <div className="media">
         <ul>
-          <li> <GrFacebookOption /> </li>
-          <li> <PiInstagramLogo /></li>
-          <li> <LiaLinkedinIn/> </li>
-          <li> <PiPinterestLogo/> </li>
+          <li className="media-icons"> <GrFacebookOption/> </li>
+          <li className="media-icons"> <PiInstagramLogo/> </li>
+          <li className="media-icons"> <LiaLinkedinIn/> </li>
+          <li className="media-icons"> <PiPinterestLogo/> </li>
         </ul>
       </div>
       <div className="buttons">
