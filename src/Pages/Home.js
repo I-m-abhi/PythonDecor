@@ -11,10 +11,7 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div className='home-page'>
-      <TopBar />
-      <Header />
       <MainSlider />
-      <MediaLinks />
       <About />
       <WhatWeDo />
       <Informative />

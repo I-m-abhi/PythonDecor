@@ -41,7 +41,7 @@ const Services = () => {
   // console.log(serviceObj)
 
   return (
-    <div className="service-section">
+    <div id="service-section">
       <div className="container">
         <div className="section-head">
           <h2>Services - </h2>

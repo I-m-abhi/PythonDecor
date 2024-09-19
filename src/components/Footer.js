@@ -1,4 +1,5 @@
 import { IoMdPaperPlane } from "react-icons/io";
+import { LiaWhatsapp } from "react-icons/lia";
 import { GrFacebookOption } from "react-icons/gr";
 import { PiInstagramLogo } from "react-icons/pi";
 import { LiaLinkedinIn } from "react-icons/lia";
@@ -6,7 +7,7 @@ import { PiPinterestLogo } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <div className="footer-section">
+    <div id="footer-section">
       <div className="container">
         <div className="content-sec-top">
           <div className="intro-sec">
@@ -29,10 +30,10 @@ const Footer = () => {
             <h2>Contact Us</h2>
             <div>
               <ul>
-                <li>Address maharastra delhi banglore south india iaodvskjds jbdsjds dkvd </li>
-                <li>7xthemedemo@gmail.com</li>
-                <li>7xthemedemo@gmail.com</li>
-                <li>7xthemedemo@gmail.com</li>
+                <li>Greater Noida, UP, India, 201301</li>
+                <li>pythondecorassociates@gmail.com</li>
+                <li>+91 8271197098</li>
+                <li>+91 6205510516</li>
               </ul>
             </div>
           </div>
@@ -40,6 +41,7 @@ const Footer = () => {
         <div className="content-sec-bottom">
           <div className="foot-media">
             <ul>
+              <li className="media-icons"> <LiaWhatsapp /> </li>
               <li className="media-icons"> <GrFacebookOption /> </li>
               <li className="media-icons"> <PiInstagramLogo /> </li>
               <li className="media-icons"> <LiaLinkedinIn /> </li>

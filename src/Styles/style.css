@@ -85,6 +85,12 @@
 
   & .rotational-logo {
     width: 3%;
+    & .logo {
+      width: 3%;
+      position: absolute;
+      top: 50%;
+      /* background-color: black; */
+    }
   }
 
   & .slide {
@@ -144,18 +150,6 @@
         }
       }
     }
-
-    & .item3 {
-      animation: slider 5s ease-in-out;
-    }
-
-    & .item1 {
-      animation: slider 5s ease-in-out 10s;
-    }
-
-    & .item2 {
-      animation: slider 5s ease-in-out 15s;
-    }
   }
 
 
@@ -169,16 +163,6 @@
 
   100% {
     transform: translateY(0);
-  }
-}
-
-@keyframes slider {
-  0% {
-    z-index: 1;
-  }
-
-  100% {
-    z-index: 0;
   }
 }
 
@@ -203,14 +187,14 @@
 }
 
 /* About-Section */
-.about-section {
+#about-section {
   background-image: url('../Images/bg-4.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100% 100%;
 }
 
-.about-section .section-head {
+#about-section .section-head {
   border: .1rem solid gray;
   padding: 2rem 1.4rem;
   font-weight: 800;
@@ -219,12 +203,12 @@
   margin-bottom: 4rem;
 }
 
-.about-section .section-content {
+#about-section .section-content {
   display: flex;
   gap: 3rem;
 }
 
-.about-section .left-content {
+#about-section .left-content {
   width: 43rem;
   height: 50rem;
   padding: 30px;
@@ -239,9 +223,24 @@
 
 }
 
-.about-section .right-content {
-  /* position: relative; */
+#about-section .right-content {
   display: flex;
+
+  & .carousel {
+    position: relative;
+
+    & div {
+      position: absolute;
+      background-color: white;
+      padding: 1.6rem .7rem;
+      top: 40%;
+      font-size: 2rem;
+
+      &:nth-of-type(2) {
+        right: 0;
+      }
+    }
+  }
 
   & .carousel-before {
     margin-left: -5rem;
@@ -250,7 +249,7 @@
   }
 }
 
-.about-section .section-content img {
+#about-section .section-content img {
   width: 35rem;
   height: 50rem;
 }
@@ -426,7 +425,7 @@
 }
 
 /* Service-Section */
-.service-section {
+#service-section {
   background-color: #eef1f2;
 
   & .container {
@@ -446,7 +445,7 @@
   }
 }
 
-.service-section .container .section-content {
+#service-section .container .section-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3.2rem;
@@ -503,12 +502,12 @@
 }
 
 /* Footer-Section */
-.footer-section {
+#footer-section {
   background-color: #23252D;
   color: white;
 }
 
-.footer-section .container .content-sec-top {
+#footer-section .container .content-sec-top {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5.4rem;
@@ -534,7 +533,7 @@
   }
 }
 
-.footer-section .container .content-sec-bottom {
+#footer-section .container .content-sec-bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 54px;
@@ -574,7 +573,95 @@
   }
 }
 
-.footer-section .copyright-sec .container {
+#footer-section .copyright-sec .container {
   padding: 2.4rem 20rem;
   border-top: .1rem solid rgba(128, 128, 128, 0.137);
+}
+
+
+.getInTouch-section {
+  background-image: url('../Images/bg-map.png');
+  background-color: #fff;
+  color: #000;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  & .container {
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+    bottom: 10%;
+    left: 13%;
+    justify-content: center;
+    align-items: end;
+  }
+
+  & .cross {
+    position: absolute;
+    right: 0;
+    font-size: 3rem;
+    padding: 2.4rem 4rem 0 0;
+    cursor: pointer;
+  }
+}
+
+.getInTouch-section .contact-details {
+  border: 10px solid #d7b39a;
+  width: 360px;
+  height: 420px;
+  padding: 2.4rem;
+
+  & .details {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 2.8rem;
+
+    & .icon {
+      font-size: 2rem;
+    }
+
+    & p {
+      margin-top: .8rem;
+    }
+  }
+}
+
+.getInTouch-section .contact-form {
+  width: 360px;
+  height: 420px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: white transparent;
+  padding: 2.4rem;
+
+  & .input-field {
+    & label {
+      font-weight: 600;
+      position: relative;
+      font-size: 1.3rem;
+      letter-spacing: .1rem;
+      line-height: 5rem;
+      opacity: .7;
+      /* top: 20px; */
+    }
+
+    & input,
+    textarea {
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: .1rem solid gray;
+      background-color: transparent;
+      line-height: 10px;
+      font-size: 1.3rem;
+      letter-spacing: .1rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  & button {
+    margin-top: 5rem;
+  }
 }

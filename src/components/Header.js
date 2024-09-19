@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import logo from '../Images/logo.jpeg';
+import GetInTouch from './GetInTouch';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   const [fixedHeader, setFixedHeader] = useState(false);
+  const [getInTouch, setGetInTouch] = useState(false);
 
   const fixedOnScroll = () => {
     if (window.scrollY >= 100) {
@@ -13,28 +16,40 @@ const Header = () => {
   };
   window.addEventListener("scroll", fixedOnScroll);
 
+  const openGetInTouch = () => {
+    setGetInTouch(true);
+  };
+
   return (
-    <div className={fixedHeader ? 'navbar fixed' : 'navbar'}>
-      <div className="logo-header">
-        <img className='logo' src={logo} alt="Python Decor & Associates" />
-        <h1>Python Decor</h1>
-      </div>
-      <div className="main-nav">
-        <ul className="nav">
-          <li>Home</li>
-          <li>About us</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>Blog</li>
-          <li>FAQ</li>
-          <li>Contact us</li>
-        </ul>
-        <div className="connect">
-          <button>Get in Touch</button>
+    <>
+      <div className={fixedHeader ? 'navbar fixed' : 'navbar'}>
+        <div className="logo-header">
+          <img className='logo' src={logo} alt="Python Decor & Associates" />
+          <h1>Python Decor</h1>
+        </div>
+        <div className="main-nav">
+          <ul className="nav">
+            <li>Home</li>
+            <AnchorLink href="#about-section">
+              <li>About us</li>
+            </AnchorLink>
+            <AnchorLink href="#service-section">
+              <li>Services</li>
+            </AnchorLink>
+            <li>Projects</li>
+            <li>Blog</li>
+            <li>FAQ</li>
+            <AnchorLink href="#footer-section">
+              <li>Contact us</li>
+            </AnchorLink>
+          </ul>
+          <div className="connect">
+            <button onClick={openGetInTouch}>Get in Touch</button>
+          </div>
         </div>
       </div>
-
-    </div>
+      <GetInTouch getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
+    </>
   )
 };
 
