@@ -49,7 +49,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="input-field">
-            <input type="mail" placeholder="ENTER YOUR EMAIL" />
+            <input type="mail" autoComplete="true" name="email" placeholder="ENTER YOUR EMAIL" />
             <li> <IoMdPaperPlane className="footer-icon" /></li>
           </div>
         </div>

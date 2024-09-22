@@ -2,29 +2,38 @@ import '../src/Styles/App.css';
 import '../src/Styles/style.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import PageNav from './components/PageNav';
 import TopBar from './components/TopBar';
-import Contact from './Pages/Contact';
+import Faq from './Pages/Faq';
 import Home from './Pages/Home';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+
+
+const AppLayout = () =>
+  <>
+    <TopBar /><Header /><Outlet /><Footer /><PageNav/>
+  </>
 
 function App() {
   const appRouter = createBrowserRouter([
     {
-      path: '/',
-      element: <Home />,
-    },
-    {
-      path: '/contact',
-      element: <Contact />,
-    },
+      element: <AppLayout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/faq',
+          element: <Faq />,
+        },
+      ]
+    }
   ]);
 
   return (
     <div className="App">
-      <TopBar/>
-      <Header/>
       <RouterProvider router={appRouter} />
-      <Footer />
     </div>
   );
 }

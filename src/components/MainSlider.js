@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import ModularKitchen from '../Images/Python/1.png';
 import ModularKitchen1 from '../Images/Python/2.png';
 import ModularKitchen2 from '../Images/Python/3.png';
-import logo from '../Images/logo.jpeg';
+// import logo from '../Images/logo.jpeg';
 import MediaLinks from './MediaLinks';
 const MainSlider = () => {
   const MySlider = [
