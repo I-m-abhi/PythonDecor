@@ -37,7 +37,7 @@ const Header = () => {
             <AnchorLink href="#service-section">
               <li>Services</li>
             </AnchorLink>
-            <li>Projects</li>
+            <Link to='/projects'><li>Projects</li></Link>
             <li>Blog</li>
             <Link to='/faq'><li>FAQ</li></Link>
             <AnchorLink href="#footer-section">

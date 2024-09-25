@@ -1,17 +1,15 @@
 import '../src/Styles/App.css';
 import '../src/Styles/style.css';
 import Footer from './components/Footer';
-import Header from './components/Header';
-import PageNav from './components/PageNav';
-import TopBar from './components/TopBar';
 import Faq from './Pages/Faq';
 import Home from './Pages/Home';
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Projects from './Pages/Projects';
 
 
 const AppLayout = () =>
   <>
-    <TopBar /><Header /><Outlet /><Footer /><PageNav/>
+    <Outlet /><Footer />
   </>
 
 function App() {
@@ -26,6 +24,10 @@ function App() {
         {
           path: '/faq',
           element: <Faq />,
+        },
+        {
+          path: '/projects',
+          element: <Projects />,
         },
       ]
     }

@@ -4,6 +4,7 @@ import { GrFacebookOption } from "react-icons/gr";
 import { PiInstagramLogo } from "react-icons/pi";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { PiPinterestLogo } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,9 +19,8 @@ const Footer = () => {
             <h2>Useful links</h2>
             <div>
               <ul>
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
+              <Link to='/'><li>Home</li></Link>
+                <Link to='/projects'><li>Projects</li></Link>
                 <li>Blog</li>
                 <li>Contact Us</li>
               </ul>

@@ -16,26 +16,25 @@ a {
 }
 
 .page-header-section {
-  & .item {
-    background-size: cover;
-    position: relative;
-    height: 420px;
+  position: relative;
+  background-size: cover;
+  height: 500px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
     width: 100%;
+    height: 500px;
+    top: 0;
+    display: inline-block;
+  }
 
-    &::before {
-      position: absolute;
-      content: '';
-      background-color: rgba(0, 0, 0, .8);
-      width: 100%;
-      height: 420px;
-      top: 0;
-      display: inline-block;
-    }
-
+  & .item {
     & .content {
       position: absolute;
-      top: 50%;
-      left: 250px;
+      bottom: 0;
+      padding-left: 20rem;
       color: #eee;
       transform: translate(0, -50%);
 
@@ -88,7 +87,7 @@ button {
 }
 
 .container {
-  padding: 5rem 20rem;
+  padding: 8rem 20rem;
 }
 
 .section-head {
