@@ -19,9 +19,9 @@ const Footer = () => {
             <h2>Useful links</h2>
             <div>
               <ul>
-              <Link to='/'><li>Home</li></Link>
-                <Link to='/projects'><li>Projects</li></Link>
-                <li>Blog</li>
+                <Link className='link' to='/'><li>Home</li></Link>
+                <Link className='link' to='/projects'><li>Projects</li></Link>
+                <Link className='link' to='/blogs'><li>Blogs</li></Link>
                 <li>Contact Us</li>
               </ul>
             </div>

@@ -5,6 +5,7 @@ import Faq from './Pages/Faq';
 import Home from './Pages/Home';
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Projects from './Pages/Projects';
+import Blog from './Pages/Blog';
 
 
 const AppLayout = () =>
@@ -28,6 +29,10 @@ function App() {
         {
           path: '/projects',
           element: <Projects />,
+        },
+        {
+          path: '/blogs',
+          element: <Blog />,
         },
       ]
     }

@@ -2,11 +2,13 @@ import { useState } from 'react';
 import logo from '../Images/logo.jpeg';
 import GetInTouch from './GetInTouch';
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [fixedHeader, setFixedHeader] = useState(false);
   const [getInTouch, setGetInTouch] = useState(false);
+  const currentRoute = useLocation().pathname.toLowerCase();
+  console.log(currentRoute)
 
   const fixedOnScroll = () => {
     if (window.scrollY >= 100) {
@@ -30,7 +32,7 @@ const Header = () => {
         </div>
         <div className="main-nav">
           <ul className="nav">
-          <Link to='/'><li>Home</li></Link>
+            <Link to='/' style={{color:currentRoute.includes("/") ? "#d7b39a" : ""}}><li>Home</li></Link>
             <AnchorLink href="#about-section">
               <li>About us</li>
             </AnchorLink>
@@ -38,7 +40,7 @@ const Header = () => {
               <li>Services</li>
             </AnchorLink>
             <Link to='/projects'><li>Projects</li></Link>
-            <li>Blog</li>
+            <Link to='/blogs'><li>Blogs</li></Link>
             <Link to='/faq'><li>FAQ</li></Link>
             <AnchorLink href="#footer-section">
               <li>Contact us</li>
