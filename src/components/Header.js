@@ -8,7 +8,6 @@ const Header = () => {
   const [fixedHeader, setFixedHeader] = useState(false);
   const [getInTouch, setGetInTouch] = useState(false);
   const currentRoute = useLocation().pathname.toLowerCase();
-  console.log(currentRoute)
 
   const fixedOnScroll = () => {
     if (window.scrollY >= 100) {

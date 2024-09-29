@@ -1,4 +1,27 @@
+import { useRef } from 'react';
+import CountUp from 'react-countup';
+
 const Informative = () => {
+  const infographic = [
+    {
+      num: '05',
+      content: 'Years of Experience',
+    },
+    {
+      num: '05',
+      content: 'Project Taken',
+    },
+    {
+      num: '05',
+      content: 'Project Completed',
+    },
+    {
+      num: '345',
+      content: 'Instagram Followers',
+    },
+  ];
+  const countUpRef = useRef();
+
   return (
     <div className="informative-section">
       <div className="infographic">
@@ -6,22 +29,19 @@ const Informative = () => {
           <h2>Infographic - </h2>
         </div>
         <div className="section-content">
-          <div className="content">
-            <div className="num">05</div>
-            <h2>Years of Experience</h2>
-          </div>
-          <div className="content">
-            <div className="num">05</div>
-            <h2>Project Taken</h2>
-          </div>
-          <div className="content">
-            <div className="num">05</div>
-            <h2>Project Completed</h2>
-          </div>
-          <div className="content">
-            <div className="num">345</div>
-            <h2>Instagram Followers</h2>
-          </div>
+          {infographic.map((item, id) =>
+            <div key={id} className="content">
+              <CountUp
+                start={0}
+                end={item.num}
+                enableScrollSpy={true}
+                ref={countUpRef}
+              >
+                {({ countUpRef }) => <span className='num' ref={countUpRef}>{item.num} </span>}
+              </CountUp>
+              <h2>{item.content}</h2>
+            </div>
+          )}
         </div>
       </div>
       <div className="testimonial">
