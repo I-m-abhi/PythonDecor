@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import fixedImg from '../Images/1-ab.jpg';
 import img1 from '../Images/about-slider/1.jpg';
 import img2 from '../Images/about-slider/2.jpg';
 import img3 from '../Images/about-slider/3.jpg';
 import img4 from '../Images/about-slider/4.jpg';
 import img5 from '../Images/about-slider/5.jpg';
+import SectionHead from './SectionHead';
 
 const About = () => {
+
   const AboutSlider = [
     {
       imgPath: img1,
@@ -40,28 +42,16 @@ const About = () => {
     }
   }
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     if (aboutSlideIndex >= 4) {
-  //       setAboutSlideIndex(0);
-  //     } else {
-  //       setAboutSlideIndex(aboutSlideIndex + 1);
-  //     }
-  //   }, 5000)
-  // })
-
   return (
     <div id="about-section">
       <div className="container">
-        <div className="section-head">
-          <h2>About us - </h2>
-        </div>
+        <SectionHead sectionHeading={'About us'}/>
         <div className="section-content">
           <div className="left-content">
             <h3>We are competitive in architecture solutions</h3>
             <p>Landscape design is a process of developing practical and pleasing outdoor living space. there are six principles of design that have been used by artists for centuries throughout all art forms, painting and floral design.</p>
             <div>
-              <span>Read More</span>
+              <button>Read More</button>
             </div>
           </div>
           <div className="right-content">

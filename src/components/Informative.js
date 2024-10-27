@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import CountUp from 'react-countup';
+import SectionHead from './SectionHead';
 
 const Informative = () => {
   const infographic = [
@@ -25,9 +26,7 @@ const Informative = () => {
   return (
     <div className="informative-section">
       <div className="infographic">
-        <div className="section-head">
-          <h2>Infographic - </h2>
-        </div>
+        <SectionHead sectionHeading={'Infographic'} />
         <div className="section-content">
           {infographic.map((item, id) =>
             <div key={id} className="content">
@@ -45,9 +44,7 @@ const Informative = () => {
         </div>
       </div>
       <div className="testimonial">
-        <div className="section-head">
-          <h2>Testimonial - </h2>
-        </div>
+        <SectionHead sectionHeading={'Testimonial'} />
         <div className="section-content">
           <div className="client-details">
             <img src="https://theme7x.com/angular/inteshape/assets/images/testimonials/pic1.jpg" alt="" />

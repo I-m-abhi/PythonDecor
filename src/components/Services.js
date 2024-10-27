@@ -4,6 +4,7 @@ import { ReactComponent as Icon3 } from '../Images/Icon/icon-3.svg';
 import { ReactComponent as Icon4 } from '../Images/Icon/icon-4.svg';
 import { ReactComponent as Icon5 } from '../Images/Icon/icon-5.svg';
 import { ReactComponent as Icon6 } from '../Images/Icon/icon-6.svg';
+import SectionHead from './SectionHead';
 
 const Services = () => {
   const serviceObj = [
@@ -38,14 +39,11 @@ const Services = () => {
       servicePara: 'We combine Interior and Exterior Design services and often provide them as a single solution. It helps us...'
     },
   ];
-  // console.log(serviceObj)
 
   return (
     <div id="service-section">
       <div className="container">
-        <div className="section-head">
-          <h2>Services - </h2>
-        </div>
+        <SectionHead sectionHeading={'Services'}/>
         <div className="section-content">
           {
             serviceObj.map((item, key) => {

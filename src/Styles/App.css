@@ -10,6 +10,13 @@ html {
   /* 1rem = 10px */
 }
 
+:root {
+  --header-bg: #EEF1F2;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --theme-color: #d7b39a;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -79,10 +86,14 @@ p {
 
 button {
   padding: 1rem 2.4rem;
-  border-radius: 1rem;
-  background-color: white;
+  background-color: var(--white-color);
   border: .1rem solid gray;
   cursor: pointer;
+  transition: all .5s linear;
+}
+button:hover {
+  background-color: var(--theme-color);
+  color: var(--white-color);
 }
 
 .logo {
@@ -114,10 +125,11 @@ button {
   border: .1rem solid gray;
   text-align: center;
   padding: 3px;
+  transition: all .5s linear;
 }
 
 .media-icons:hover {
   cursor: pointer;
   background-color: #d7b39a;
-  border: none;
+  color: white;
 }

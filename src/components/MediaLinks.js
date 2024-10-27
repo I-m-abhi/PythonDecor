@@ -4,21 +4,9 @@ import { PiInstagramLogo } from "react-icons/pi";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { PiPinterestLogo } from "react-icons/pi";
 
-const MediaLinks = ({sliderIndex, setSliderIndex})=> {
-  const preMainSlider = ()=> {
-    if (sliderIndex <= 0) {
-      setSliderIndex(2);
-    } else {
-      setSliderIndex(sliderIndex - 1);
-    }
-  }
-  const nextMainSlider = ()=> {
-    if (sliderIndex >= 2) {
-      setSliderIndex(0);
-    } else {
-      setSliderIndex(sliderIndex + 1);
-    }
-  }
+const MediaLinks = ()=> {
+  const preMainSlider = ()=> {};
+  const nextMainSlider = ()=> {};
 
   return (
     <div className="medialinks">
