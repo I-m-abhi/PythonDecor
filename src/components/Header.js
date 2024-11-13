@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../Images/logo.jpeg';
+import logo from '../Images/logo.png';
 import GetInTouch from './GetInTouch';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link, useLocation } from 'react-router-dom';
@@ -24,32 +24,52 @@ const Header = () => {
 
   return (
     <>
-      <div className={fixedHeader ? 'navbar fixed' : 'navbar'}>
-        <div className="logo-header">
-          <img className='logo' src={logo} alt="Python Decor & Associates" />
-          <h1>Python Decor</h1>
-        </div>
-        <div className="main-nav">
-          <ul className="nav">
-            <Link to='/' style={{color:currentRoute.includes("/") ? "#d7b39a" : ""}}><li>Home</li></Link>
-            <AnchorLink href="#about-section">
-              <li>About us</li>
-            </AnchorLink>
-            <AnchorLink href="#service-section">
-              <li>Services</li>
-            </AnchorLink>
-            <Link to='/projects'><li>Projects</li></Link>
-            <Link to='/blogs'><li>Blogs</li></Link>
-            <Link to='/faq'><li>FAQ</li></Link>
-            <AnchorLink href="#footer-section">
-              <li>Contact us</li>
-            </AnchorLink>
-          </ul>
+      <header className={fixedHeader ? 'header-section fixed' : 'header-section'}>
+        <div className="container">
+          <div className='header-brand'>
+            <div className="logo">
+              <img src={logo} alt="Python Decor & Associates" />
+            </div>
+            <h1>Python Decor <br /><span>& Associates</span></h1>
+          </div>
+          <nav className='navbar'>
+            <ul>
+              <li>
+                <Link to='/'
+                  className='nav-link'
+                  style={{ color: currentRoute.includes("/") ? "#48C989" : "" }}>Home</Link>
+              </li>
+              <li>
+                <AnchorLink href="#about-section">
+                  About us
+                </AnchorLink>
+              </li>
+              <li>
+                <AnchorLink href="#service-section">
+                  Services
+                </AnchorLink>
+              </li>
+              <li>
+                <Link to='/projects'>Projects</Link>
+              </li>
+              <li>
+                <Link to='/blogs'>Blogs</Link>
+              </li>
+              <li>
+                <Link to='/faq'>FAQ</Link>
+              </li>
+              <li>
+                <AnchorLink href="#footer-section">
+                  Contact us
+                </AnchorLink>
+              </li>
+            </ul>
+          </nav>
           <div className="connect">
             <button onClick={openGetInTouch}>Get in Touch</button>
           </div>
         </div>
-      </div>
+      </header>
       <GetInTouch getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
     </>
   )

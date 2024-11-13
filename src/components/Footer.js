@@ -4,15 +4,19 @@ import { GrFacebookOption } from "react-icons/gr";
 import { PiInstagramLogo } from "react-icons/pi";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { PiPinterestLogo } from "react-icons/pi";
+import { IoLocation } from "react-icons/io5";
+import { MdMarkEmailUnread } from "react-icons/md";
+import { FaPhone } from "react-icons/fa6";
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div id="footer-section">
+    <footer id="footer-section">
       <div className="container">
-        <div className="content-sec-top">
+        <div className="grid grid-three-cols">
           <div className="intro-sec">
-            <h2>Python Decor</h2>
+            <h2>Python Decor & Associates</h2>
             <p>7X Theme is a html template for interior and architecture purpose. Today we can tell you, thanks to your passion.</p>
           </div>
           <div className="link-sec">
@@ -28,17 +32,32 @@ const Footer = () => {
           </div>
           <div className="contact-sec">
             <h2>Contact Us</h2>
-            <div>
+            <div className="sec-content">
               <ul>
-                <li>Greater Noida, UP, India, 201301</li>
-                <li>pythondecorassociates@gmail.com</li>
-                <li>+91 8271197098</li>
-                <li>+91 6205510516</li>
+                <li><IoLocation/></li>
+                <li> Python Decor & Associates <br />
+                  C-2207, Coco County <br />
+                  Greater Noida, UP, 201301 <br />
+                  ( Visit by Appointment Only )
+                </li>
+              </ul>
+              <ul>
+                <li><MdMarkEmailUnread /></li>
+                <li> pythondecorassociates@gmail.com</li>
+              </ul>
+              <ul>
+                <li><FaPhone /></li>
+                <li> +91 8271197098</li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="content-sec-bottom">
+        <div className="input-field">
+          <input type="mail" autoComplete="true" name="email" placeholder="ENTER YOUR EMAIL" />
+          <li> <IoMdPaperPlane className="footer-icon" /></li>
+        </div>
+        <div className="copyright-sec">
+          <p>© 2022 Your Company. Designed By 7xtheme.</p>
           <div className="foot-media">
             <ul>
               <li className="media-icons"> <LiaWhatsapp /> </li>
@@ -48,18 +67,10 @@ const Footer = () => {
               <li className="media-icons"> <PiPinterestLogo /> </li>
             </ul>
           </div>
-          <div className="input-field">
-            <input type="mail" autoComplete="true" name="email" placeholder="ENTER YOUR EMAIL" />
-            <li> <IoMdPaperPlane className="footer-icon" /></li>
-          </div>
         </div>
       </div>
-      <div className="copyright-sec">
-        <div className="container">
-          <p>© 2022 Your Company. Designed By 7xtheme.</p>
-        </div>
-      </div>
-    </div>
+
+    </footer>
   )
 };
 

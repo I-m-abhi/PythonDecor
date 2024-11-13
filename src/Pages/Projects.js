@@ -3,6 +3,7 @@ import projectPageBg from '../Images/3.jpg';
 import { projectHeading } from "../Constants/constants";
 import { projectDetails } from "../Constants/constants";
 import { useState } from "react";
+import ProjectsComp from "../components/ProjectsComp";
 
 const Projects = () => {
   const [filteredProject, setFilteredProject] = useState(projectDetails);
@@ -36,21 +37,7 @@ const Projects = () => {
             )}
           </ul>
         </div>
-        <div className="project-listing">
-          {filteredProject.map((project, id) =>
-            <div key={id} className="item">
-              <div>
-                <img
-                  src={project.projectImg} alt="Projects Details Loading..." />
-              </div>
-              <div className="content-text">
-                <h3>{project.imageOf}</h3>
-                <h4>{project.location}</h4>
-                <p>{project.moreDetails}</p>
-              </div>
-            </div>
-          )}
-        </div>
+        <ProjectsComp sectionHeading={'Projects'} details={filteredProject}/>
       </div>
     </div>
   )

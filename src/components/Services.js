@@ -43,14 +43,14 @@ const Services = () => {
   return (
     <div id="service-section">
       <div className="container">
-        <SectionHead sectionHeading={'Services'}/>
-        <div className="section-content">
+        <SectionHead sectionHeading={'Services'} />
+        <div className="grid grid-three-cols">
           {
             serviceObj.map((item, key) => {
               return (
                 <div className="content" key={key}>
                   <div className="num">{'0' + (key + 1)}</div>
-                  {item.icon}
+                  <div className='service-icon--box'>{item.icon}</div>
                   <h3>{item.serviceName}</h3>
                   <p>{item.servicePara}</p>
                   <button>Read more</button>

@@ -9,7 +9,7 @@ const Informative = () => {
       content: 'Years of Experience',
     },
     {
-      num: '05',
+      num: '08',
       content: 'Project Taken',
     },
     {
@@ -17,8 +17,8 @@ const Informative = () => {
       content: 'Project Completed',
     },
     {
-      num: '345',
-      content: 'Instagram Followers',
+      num: '03',
+      content: 'Ongoing Projects',
     },
   ];
   const countUpRef = useRef();

@@ -5,6 +5,7 @@ import img2 from '../Images/about-slider/2.jpg';
 import img3 from '../Images/about-slider/3.jpg';
 import img4 from '../Images/about-slider/4.jpg';
 import img5 from '../Images/about-slider/5.jpg';
+import about from '../Images/about-slider/about.jpeg';
 import SectionHead from './SectionHead';
 
 const About = () => {
@@ -43,31 +44,28 @@ const About = () => {
   }
 
   return (
-    <div id="about-section">
+    <section id="about-section">
       <div className="container">
-        <SectionHead sectionHeading={'About us'}/>
-        <div className="section-content">
+        <SectionHead sectionHeading={'About us'} />
+        <div className="grid grid-two-cols">
           <div className="left-content">
             <h3>We are competitive in architecture solutions</h3>
-            <p>Landscape design is a process of developing practical and pleasing outdoor living space. there are six principles of design that have been used by artists for centuries throughout all art forms, painting and floral design.</p>
-            <div>
-              <button>Read More</button>
-            </div>
+            <p>Welcome to Python Decor & Associates, your partner in transforming spaces into beautiful, functional environments. Based in Delhi NCR, we offer a full spectrum of interior design and construction services, serving Faridabad, Noida, Greater Noida, and beyond. With our expertise in creating unique, personalized interiors, we focus on blending creativity with practicality to bring your vision to life.</p>
+            <p>At Python Decor & Associates, we believe every space tells a story, and our passion lies in making that story remarkable. Whether it's a cozy residential haven or an elegant commercial setting, our dedicated team ensures every project reflects the client's style and needs, with a commitment to delivering quality craftsmanship and a seamless design experience.</p>
           </div>
           <div className="right-content">
-            <div className="carousel">
-              <div onClick={preSlider}>&lt;</div>
-              <img src={AboutSlider[aboutSlideIndex].imgPath} alt="About-Slider" />
-              <div onClick={nextSlider}>&gt;</div>
-              <h2>{aboutSlideIndex + 1} / 5</h2>
-            </div>
-            <div className="carousel-before">
-              <img src={fixedImg} alt="Fixed before Slider" />
-            </div>
+                <div className="img-box"
+                  style={{ backgroundImage: 'url(' + AboutSlider[aboutSlideIndex].imgPath + ')' }}
+                >
+                  <button onClick={nextSlider}>&lt;</button>
+                  <button onClick={preSlider}>&gt;</button>
+                </div>
+
+            
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 };
 

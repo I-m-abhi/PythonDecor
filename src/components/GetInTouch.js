@@ -1,4 +1,4 @@
-import { MdLocalPhone } from "react-icons/md";
+import { MdLocalPhone, MdMarkEmailUnread } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 import { LiaWhatsapp } from "react-icons/lia";
@@ -7,6 +7,8 @@ import { PiInstagramLogo } from "react-icons/pi";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { PiPinterestLogo } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
+import { IoLocation } from "react-icons/io5";
+import { FaPhone } from "react-icons/fa6";
 
 const GetInTouch = ({ getInTouch, setGetInTouch }) => {
   const closeGetInTouch = () => {
@@ -16,58 +18,46 @@ const GetInTouch = ({ getInTouch, setGetInTouch }) => {
   return (
     <>
       {getInTouch &&
-        (<div className="getInTouch-section">
-          <div className="container">
-            <div className="contact-details">
-              <div className="details">
-                <div className="icon"><MdLocalPhone /></div>
-                <div>
-                  <h2>Phone Number</h2>
-                  <p>6205510516</p>
-                </div>
-              </div>
-              <div className="details">
-                <div className="icon"><MdEmail /></div>
-                <div>
-                  <h2>Email Address</h2>
-                  <p>pythondecorassociates@gmail.com</p>
-                </div>
-              </div>
-              <div className="details">
-                <div className="icon"><MdLocationPin /></div>
-                <div>
-                  <h2>Address Info</h2>
-                  <p>Greater Noida, UP, India, 201301</p>
-                </div>
-              </div>
-              <div className="details">
-                <li className="media-icons"> <LiaWhatsapp /> </li>
-                <li className="media-icons"> <GrFacebookOption /> </li>
-                <li className="media-icons"> <PiInstagramLogo /> </li>
-                <li className="media-icons"> <LiaLinkedinIn /> </li>
-                <li className="media-icons"> <PiPinterestLogo /> </li>
-              </div>
+        (<section className="getInTouch-section">
+          <div className="container grid grid-two-cols">
+            <div className="sec-content">
+              <ul>
+                <li><IoLocation /></li>
+                <li> Python Decor & Associates <br />
+                  C-2207, Coco County <br />
+                  Greater Noida, UP, 201301 <br />
+                  ( Visit by Appointment Only )
+                </li>
+              </ul>
+              <ul>
+                <li><MdMarkEmailUnread /></li>
+                <li> pythondecorassociates@gmail.com</li>
+              </ul>
+              <ul>
+                <li><FaPhone /></li>
+                <li> +91 8271197098</li>
+              </ul>
             </div>
             <div className="contact-form">
               <form action="">
                 <div className="input-field">
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name">Name*</label><br />
                   <input type="text" name="username" id="name" required />
                 </div>
                 <div className="input-field">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">Email</label><br />
                   <input type="email" name="email" id="email" required />
                 </div>
                 <div className="input-field">
-                  <label htmlFor="phone">Phone</label>
+                  <label htmlFor="phone">Phone</label><br />
                   <input type="text" name="phone" id="phone" required />
                 </div>
                 <div className="input-field">
-                  <label htmlFor="message">Textarea</label>
+                  <label htmlFor="message">Property Details</label><br />
                   <textarea name="message" id="message" required></textarea>
                 </div>
                 <div>
-                  <button type="submit">SUBMIT NOW</button>
+                  <button type="submit">Submit Now</button>
                 </div>
               </form>
             </div>
@@ -75,7 +65,7 @@ const GetInTouch = ({ getInTouch, setGetInTouch }) => {
           <div className="cross">
             <RxCross2 onClick={closeGetInTouch} />
           </div>
-        </div>
+        </section>
         )
       }
     </>

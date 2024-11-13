@@ -1,16 +1,22 @@
-import '../src/Styles/App.css';
-import '../src/Styles/style.css';
+// import '../src/Styles/App.css';
+// import '../src/Styles/style.css';
+import '../src/Styles/updateStyle.css';
 import Footer from './components/Footer';
 import Faq from './Pages/Faq';
 import Home from './Pages/Home';
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Projects from './Pages/Projects';
 import Blog from './Pages/Blog';
+import TopBar from './components/TopBar';
+import Header from './components/Header';
 
 
 const AppLayout = () =>
   <>
-    <Outlet /><Footer />
+    <TopBar />
+    <Header />
+    <Outlet />
+    <Footer />
   </>
 
 function App() {
